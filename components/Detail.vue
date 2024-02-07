@@ -93,7 +93,7 @@ h6 {
 .product_list {
     padding: 8px;
 
-    margin-top: -20px;
+    margin-top: -50px;
 }
 
 .product {
@@ -101,7 +101,7 @@ h6 {
     width: 160px;
     height: 160px;
 
-    margin: 58px 10px 10px 10px;
+    margin: 70px 10px 10px 10px;
 
 }
 

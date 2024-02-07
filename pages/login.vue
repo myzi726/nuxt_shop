@@ -1,19 +1,28 @@
 <template>
   <div class="login_box">
     <h1>로그인</h1>
+
     <div class="input_id">
-        아이디 : <input type="text" class="input_form_id">
+        <v-text-field
+          label="아이디"
+          type="input"
+      ></v-text-field>
     </div>
+
     <div class="input_pw">
-        비밀번호 : <input type="password" class="input_form_pw">
+        <v-text-field
+            label="비밀번호"
+            type="password"
+      ></v-text-field>
     </div>
+
     <div class="btn_login">
-    <v-btn
-      color="primary"
-      elevation="2"
-      outlined
-      rounded
-    >로그인</v-btn>
+      <v-btn
+        color="primary"
+        elevation="2"
+        outlineda
+        rounded
+      >로그인</v-btn>
     </div>
   </div>
 </template>
@@ -38,7 +47,7 @@ h1 {
 
 .input_id {
   font-size: 20px;
-  padding: 5px;
+  padding: 20px;
 }
 
 .input_form_id {
@@ -47,29 +56,12 @@ h1 {
 
 .input_pw {
   font-size: 20px;
-  padding: 5px;
-  margin: 10px;
+  padding: 20px;
 }
 
 .input_form_pw {
   padding: 7px;
 }
 
-.btn_login{
-  padding: 10px;
-}
-
-button {
-  width: 100px;
-  height: 30px;
-
-  font-size: 15px;
-  font-weight: bold;
-
-  background: lightskyblue;
-
-  border: none;
-  border-radius: 5px;
-}
 
 </style>

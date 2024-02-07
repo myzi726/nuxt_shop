@@ -6,11 +6,11 @@
             <div class="cate_img1"></div>
         </nuxt-link>
 
-        <nuxt-link to="/about">
+        <nuxt-link to="/">
             <div class="cate_img2"></div>
         </nuxt-link>
 
-        <nuxt-link to="/about">
+        <nuxt-link to="/">
             <div class="cate_img3"></div>
         </nuxt-link>
 
