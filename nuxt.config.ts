@@ -12,4 +12,7 @@ export default defineNuxtConfig({
   css: ["assets/setting.css",
   'vuetify/lib/styles/main.sass',
   '@mdi/font/css/materialdesignicons.min.css' ]
+  ,
 })
+
+serverMiddleware: ['~/api/index.js']

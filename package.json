@@ -1,7 +1,7 @@
 {
   "name": "nuxt-app",
   "private": true,
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
+    "express": "^4.18.2",
+    "mysql": "^2.18.1",
     "nuxt": "^3.10.1",
     "sass": "^1.70.0",
     "vue": "^3.4.15",

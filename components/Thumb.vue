@@ -1,7 +1,7 @@
 <template>
     <div class="container"> 
       <div class="main_img">
-        <h1>썸네일</h1>
+        <img src="../assets/thumbImg.jpeg" class="thumb_img">
       </div>
     </div>
   
@@ -23,5 +23,11 @@
 
   width: 100vw;
   height: 350px;
+}
+
+.thumb_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 </style>

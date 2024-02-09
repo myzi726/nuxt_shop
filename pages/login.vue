@@ -2,28 +2,32 @@
   <div class="login_box">
     <h1>로그인</h1>
 
-    <div class="input_id">
-        <v-text-field
-          label="아이디"
-          type="input"
-      ></v-text-field>
-    </div>
+  <form v-on:submit.prevent="submitForm">
+      <div class="input_id">
+          <v-text-field
+            v-model="userId"
+            label="아이디"
+            type="input"
+        ></v-text-field>
+      </div>
 
-    <div class="input_pw">
-        <v-text-field
-            label="비밀번호"
-            type="password"
-      ></v-text-field>
-    </div>
+      <div class="input_pw">
+          <v-text-field
+              v-model="userPw"
+              label="비밀번호"
+              type="password"
+        ></v-text-field>
+      </div>
 
-    <div class="btn_login">
-      <v-btn
-        color="primary"
-        elevation="2"
-        outlineda
-        rounded
-      >로그인</v-btn>
-    </div>
+      <div class="btn_login">
+        <v-btn
+          color="primary"
+          elevation="2"
+          outlineda
+          rounded
+        >로그인</v-btn>
+      </div>
+    </form>
   </div>
 </template>
 
