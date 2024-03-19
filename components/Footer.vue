@@ -1,17 +1,21 @@
 <template>
   <div class="footer">
+  
       <div class="bottomBar">
         <nuxt-link to="/">
-          <img src="../assets/home.png" class="to_home">
+          <img src="../assets/image/home.png" class="to_home">
         </nuxt-link>
-        <img src="../assets/category.png" class="to_category">
-        <nuxt-link to="/wish" class="title_btb">
-          <img src="../assets/wish.png" class="to_wish">
+        <nuxt-link to="category">
+        <img src="../assets/image/category.png" class="to_category">
         </nuxt-link>
-        <nuxt-link to="/myPage" class="title_btb">
-          <img src="../assets/mypage.png" class="to_mypage">
+        <nuxt-link to="wish" class="title_btb">
+          <img src="../assets/image/wish.png" class="to_wish">
+        </nuxt-link>
+        <nuxt-link to="myPage" class="title_btb">
+          <img src="../assets/image/mypage.png" class="to_mypage">
         </nuxt-link>
       </div>
+
     </div>
 </template>
 
@@ -19,14 +23,16 @@
 </script>
 
 <style scoped>
-
 .footer {
   display: flex;
   justify-content: center;
 
-  background: lightgray;
-
+  background: white;
   color: white;
+
+  padding: 10px;
+
+  border-top: 0.5px solid lightgray;
 }
 
 .bottomBar {
@@ -45,28 +51,35 @@
 .to_home {
   padding: 10px;
   margin-right: 25px;
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
+
 }
 
 .to_category {
   padding: 10px;
   margin-right: 25px;
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
+
+
 }
 
 .to_wish {
   padding: 10px;
   margin-right: 25px;
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
+
+
 }
 
 .to_mypage {
   padding: 10px;
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
+
+
 }
 
 </style>

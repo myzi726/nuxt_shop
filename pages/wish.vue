@@ -1,15 +1,47 @@
 <template>
-  <div>
-    <h2>WISH</h2>
-    <p>WISH페이지입니다.</p>
 
-    <nuxt-link to="/"><h3>이전</h3></nuxt-link>
+  <Header />
+
+  <div v-if="isLoggedIn">
+      <Wishlist />
   </div>
-</template>
-<script setup lang="ts">
+  <div v-else>
+    <GuestUserWish />
+  </div>
 
+  <Footer />
+  
+</template>
+
+
+<script>
+import Wishlist  from '~/components/Wishlist.vue';
+import GuestUserWish from '~/components/GuestUserWish.vue';
+
+export default {
+    components: {
+      Wishlist,
+      GuestUserWish,
+    },
+
+    data() {
+        return {
+            isLoggedIn: false
+        }
+    },
+
+    created() {
+        const token = typeof window !== 'undefined' ?  sessionStorage.getItem('token') : null;
+
+        if(token) {
+            this.isLoggedIn = true
+        } else {
+            this.isLoggedIn = false
+        }
+    }
+}
 </script>
 
-<style scoped>
+<style>
 
 </style>

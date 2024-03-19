@@ -1,14 +1,12 @@
 <template>
-  <div>
     <Header />
 
-    <Detail />
+    <DetailBase />
 
     <Footer />
-  </div>
 </template>
-<script setup lang="ts">
 
+<script>
 </script>
 
 <style scoped>

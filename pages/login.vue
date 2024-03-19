@@ -2,45 +2,80 @@
   <div class="login_box">
     <h1>로그인</h1>
 
-  <form v-on:submit.prevent="submitForm">
+    <form @submit.prevent="HandleLogin">
       <div class="input_id">
-          <v-text-field
-            v-model="userId"
-            label="아이디"
-            type="input"
-        ></v-text-field>
+        <input
+          id="u_id"
+          v-model="user_id"
+          placeholder="아이디"
+          type="text"
+        />
       </div>
 
       <div class="input_pw">
-          <v-text-field
-              v-model="userPw"
-              label="비밀번호"
-              type="password"
-        ></v-text-field>
+        <input
+          id="u_pw"
+          v-model="user_pw"
+          placeholder="비밀번호"
+          type="password"
+        />
       </div>
 
-      <div class="btn_login">
-        <v-btn
-          color="primary"
-          elevation="2"
-          outlineda
-          rounded
-        >로그인</v-btn>
+      <div class="wrap_btn_login">
+        <button type="submit" class="btn_login">LOGIN</button>
       </div>
     </form>
-  </div>
+  </div>   
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      user_id: "",
+      user_pw: "",
+    }
+  },
 
-}
+  methods: {
+    async HandleLogin() {
+        try {
+        const token = sessionStorage.getItem('token');
+        const response = await fetch('http://localhost:3001/login', {
+          method: 'POST',
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            user_id: this.user_id,
+            user_pw: this.user_pw
+          })
+        })
+
+
+        const data = await response.json()
+
+        if(response.ok) {
+          alert('로그인 성공')
+          sessionStorage.setItem('token', data.token)
+          this.$router.push('/')
+        } else {
+          alert('로그인 실패')
+        }
+
+      } catch (error) {
+        console.error(error)
+      }
+      }
+    }
+  }
 </script>
 
 <style>
-
 h1 {
-  margin-top: 50px;
+  margin-top: 80px;
+  margin-bottom: 15px;
   padding: 30px;
 }
 
@@ -49,23 +84,33 @@ h1 {
   text-align: center;
 }
 
-.input_id {
-  font-size: 20px;
+.input_id, .input_pw {
   padding: 20px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
-.input_form_id {
-  padding: 7px;
+#u_id, #u_pw {
+  border-style: solid;
+  border-radius: 8px;
+
+  padding: 10px;
 }
 
-.input_pw {
+.wrap_btn_login {
+  margin: 50px;
+}
+
+.btn_login {
+  width: 100px;
+  height: 40px;
+
   font-size: 20px;
-  padding: 20px;
-}
+  font-weight: bold;
 
-.input_form_pw {
-  padding: 7px;
-}
+  border-radius: 10px;
 
+  background: lightskyblue;
+}
 
 </style>

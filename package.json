@@ -1,7 +1,8 @@
 {
   "name": "nuxt-app",
   "private": true,
-  "type": "commonjs",
+  "type": "module",
+  "proxy": "http://localhost:3001",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -11,12 +12,24 @@
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
-    "express": "^4.18.2",
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "jsonwebtoken": "^9.0.2",
     "mysql": "^2.18.1",
+    "mysql2": "^3.9.1",
     "nuxt": "^3.10.1",
+    "nvm": "^0.0.4",
     "sass": "^1.70.0",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5",
     "vuetify": "^3.4.0-beta.1"
+  },
+  "devDependencies": {
+    "@nuxtjs/axios": "^5.13.6",
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "express-session": "^1.18.0",
+    "nodemon": "^3.0.3"
   }
 }

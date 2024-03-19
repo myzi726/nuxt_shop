@@ -1,7 +1,7 @@
 <template>
     <div class="container"> 
       <div class="main_img">
-        <img src="../assets/thumbImg.jpeg" class="thumb_img">
+        <nuxt-link to="lip_product"><img src="../assets/image/thumbImg.jpeg" class="thumb_img"></nuxt-link>
       </div>
     </div>
   
@@ -17,8 +17,6 @@
 }
 
 .main_img {
-  background:lightgray;
-
   text-align: center;
 
   width: 100vw;
@@ -26,8 +24,11 @@
 }
 
 .thumb_img {
-    width: 100%;
+    width: 330px;
     height: 100%;
+
+    margin-left: 5px;
+
     object-fit: cover;
 }
 </style>

@@ -1,11 +1,9 @@
 <template>
-  <div class="content">
+  <div>
     <slot />
   </div>
 </template>
 
 <style scoped>
-  .content{
-    margin: 0;
-  }
+
 </style>

@@ -1,14 +1,16 @@
 <template>
+  <div>
   <Header />
   <Thumb />
   <Category />
   <Footer />
+  </div>
 </template>
 
-<script setup lang="ts">
+<script>
 
 </script>
 
-<style scoped>
+<style>
 
 </style>

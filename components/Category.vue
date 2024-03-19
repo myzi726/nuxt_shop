@@ -2,16 +2,16 @@
     <div class="wrap_category">
       <div class="category">
         
-        <nuxt-link to="/detail">
-            <div class="cate_img1"></div>
+        <nuxt-link to="base_product">
+            <img src="../assets/image/baseIcon.png" class="to_base_pr">
         </nuxt-link>
 
-        <nuxt-link to="/">
-            <div class="cate_img2"></div>
+        <nuxt-link to="lip_product">
+            <img src="../assets/image/lipIcon.png" class="to_lip_pr">
         </nuxt-link>
 
-        <nuxt-link to="/">
-            <div class="cate_img3"></div>
+        <nuxt-link to="eye_product">
+            <img src="../assets/image/eyeIcon.png" class="to_eye_pr">
         </nuxt-link>
 
       </div>
@@ -24,50 +24,31 @@
 </script>
 
 <style scoped>
+h4 {
+    margin: 0px;
+}
+
 .wrap_category {
   display: flex;
   justify-content: center;
 
   width: 100vw;
-  height: 170px;
-
-  margin-top: -10px;
+  height: 162px;
 }
 
-.cate_img1 {
-    display: inline-block;
-
-    background: #000;
-    color: white;
-    width: 100px;
-    height: 100px;
-    margin: 40px 10px 10px;
-
-    border-radius: 50px;
+.category {
+    margin: 10px;
 }
 
-.cate_img2 {
+.to_base_pr,
+.to_lip_pr,
+.to_eye_pr{
     display: inline-block;
 
-    background: #000;
-    color: white;
-    width: 100px;
-    height: 100px;
-    margin: 40px 10px 10px;
+    width: 80px;
 
-    border-radius: 50px;
-}
-
-.cate_img3 {
-    display: inline-block;
-
-    background: #000;
-    color: white;
-    width: 100px;
-    height: 100px;
-    margin: 40px 10px 10px;
-
-    border-radius: 50px;
+    margin: 30px 15px 0 15px;
+    
 }
 
 </style>
